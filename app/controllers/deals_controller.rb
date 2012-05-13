@@ -7,7 +7,7 @@ class DealsController < ApplicationController
   def index
     
     @location = Geolocation.last
-    @deals = JSON.parse(open("https://api.groupon.com/v2/deals/?client_id=0c28cc83918dfc63dcf8d6a798613b6fbb6c6c3e&lat=#{@location["latitude"]}&lng=#{@location["longitude"]}").read)
+    @deals = JSON.parse(open("http://api.groupon.com/v2/deals/?client_id=0c28cc83918dfc63dcf8d6a798613b6fbb6c6c3e&lat=#{@location["latitude"]}&lng=#{@location["longitude"]}").read)
     
     @type = ["Nester", "Kitchen Couture", "Healthy Living", "Fountain of Youth", "Gadget + Gear",
                 "Home Improvement", "Audiophile", "Threads", "Cultural Pursuits", "Pampered", 

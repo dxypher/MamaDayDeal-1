@@ -23,15 +23,6 @@ ActiveRecord::Schema.define(:version => 20120513030248) do
     t.string   "image"
   end
 
-  create_table "deals", :force => true do |t|
-    t.string   "name"
-    t.string   "type"
-    t.string   "highlight"
-    t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "geolocations", :force => true do |t|
     t.string   "address"
     t.float    "latitude"
