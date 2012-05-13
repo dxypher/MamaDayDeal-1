@@ -23,7 +23,7 @@ class DealsController < ApplicationController
     def create
     	@location = Geolocation.new(params[:geolocation])
     	@location.save
-    	redirect_to '/'
+    	redirect_to '/deals'
     end
     
     def show

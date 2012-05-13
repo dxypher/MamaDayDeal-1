@@ -1,8 +1,8 @@
 MamaDayDeal::Application.routes.draw do
   
-  root :to => 'deals#index'
+  root :to => 'deals#new'
   
-  get "deals/index"
+  get "deals", controller: 'deals', action: 'index'
   
   get "locations/new", controller: "deals", action: "new"
   
